@@ -151,7 +151,7 @@ namespace WindowsApplication1
             //bitiþ mesajý
             if (sag == 0 && sol == 0 && ust == 0 && alt == 0 && ustsol==0 && ustsag==0 && altsag==0 && altsol==0) 
             {
-                MessageBox.Show("Oyun Bitti. Nereye Týklýcan Þimdi Skorun: "+ Convert.ToString(son-1)+" ok.:))");
+                MessageBox.Show("Oyun Bitti Oglum Nereye Týklýcan Skorun: "+ Convert.ToString(son-1)+" ok.:D");
             } 
 
             //rakamlarý yerleþtir
@@ -224,7 +224,7 @@ namespace WindowsApplication1
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            //this.Text = "x: "+Convert.ToString(e.X)+" y: "+Convert.ToString( e.Y);
+            this.Text = "x: "+Convert.ToString(e.X)+" y: "+Convert.ToString( e.Y);
             textBox1.Text = Convert.ToString(e.X);
             textBox2.Text = Convert.ToString(e.Y);
             
@@ -249,7 +249,7 @@ namespace WindowsApplication1
 
         private void ayarlarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Programlama: Erkan ESEN");
+            MessageBox.Show("Oyun Yapým Ve Programlama: Erkan ESEN / Oyun Fikri: Veysel ÇAKIR / Hatalar için: esengraphic@hotmail.com");
         }
     }
 }

@@ -29,7 +29,6 @@ namespace WindowsApplication1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.oyunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baþlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +51,13 @@ namespace WindowsApplication1
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,20 +76,20 @@ namespace WindowsApplication1
             this.oyunToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.baþlaToolStripMenuItem});
             this.oyunToolStripMenuItem.Name = "oyunToolStripMenuItem";
-            this.oyunToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.oyunToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.oyunToolStripMenuItem.Text = "Oyun";
             // 
             // baþlaToolStripMenuItem
             // 
             this.baþlaToolStripMenuItem.Name = "baþlaToolStripMenuItem";
-            this.baþlaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.baþlaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.baþlaToolStripMenuItem.Text = "Baþla";
             this.baþlaToolStripMenuItem.Click += new System.EventHandler(this.baþlaToolStripMenuItem_Click);
             // 
             // ayarlarToolStripMenuItem
             // 
             this.ayarlarToolStripMenuItem.Name = "ayarlarToolStripMenuItem";
-            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.ayarlarToolStripMenuItem.Text = "Hakkýnda";
             this.ayarlarToolStripMenuItem.Click += new System.EventHandler(this.ayarlarToolStripMenuItem_Click);
             // 
@@ -109,7 +110,7 @@ namespace WindowsApplication1
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(659, 249);
+            this.groupBox1.Location = new System.Drawing.Point(666, 186);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(149, 379);
             this.groupBox1.TabIndex = 1;
@@ -242,23 +243,14 @@ namespace WindowsApplication1
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Gray;
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(659, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(168, 216);
+            this.groupBox2.Size = new System.Drawing.Size(156, 89);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Skorlar";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(54, 43);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(40, 20);
-            this.textBox7.TabIndex = 3;
             // 
             // label10
             // 
@@ -269,22 +261,38 @@ namespace WindowsApplication1
             this.label10.TabIndex = 2;
             this.label10.Text = "Toplam Eklenen Sayý";
             // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(50, 43);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(47, 20);
+            this.textBox7.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(477, 139);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 609);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "VEYS";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
-            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -292,6 +300,7 @@ namespace WindowsApplication1
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,6 +332,7 @@ namespace WindowsApplication1
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
